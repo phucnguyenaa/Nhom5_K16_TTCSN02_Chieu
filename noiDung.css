@@ -1,0 +1,58 @@
+body{
+    background-image: url("./Screenshot\ 2023-03-28\ 212130.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    margin-top: -30px;
+}
+.card__header{
+    background-image: url(https://i.ytimg.com/vi/dFvd2urgpT8/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    height: 30px ;
+    width:300px;
+    margin-left:40% ;
+    text-align: center;
+    padding: auto;    
+}
+.card__header P{
+    padding-top: 15px;
+}
+img{
+    height: 150px;  
+    width: 200px;
+}
+.main .card-container .card__picture{
+    position: relative;
+}
+.main .card-container 
+{
+    margin-top: 50px;
+    flex: auto;
+}
+.main .card-container .card{
+    margin-bottom: 72px;
+    display: flex;
+    margin-left: 195px;
+}   
+.main .card-container .card .card__picture{
+    margin-left: 20px;
+}
+.main .card-container .card .detail{
+    display: none;
+    border: solid black 2px;
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    background-color: white;
+    z-index: 1000;
+}
+.main .card-container .card .detail .name-book{
+    height: 30px;
+    line-height: 30px;
+    background-color: green;
+    color: white;
+}
+.main .card-container .card .card__picture:hover .detail {
+    display: block;   
+}

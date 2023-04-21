@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin:  0;
+	}	
+	body{
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		font-size: 14px;
+		line-height: 1.15;
+		color: #111;
+	}
+	#wrapper{
+		max-width:1000px;
+/*		max-height: 500px;*/
+		margin: 0 auto;
+	}
+	ul.product{
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+	ul.product li{
+		flex-basis: 25%;
+		padding-left: 15px;
+		padding-right: 15px;
+		box-sizing: border-box;
+		margin-bottom: 30px;
+	}
+
+	ul.product li img{
+		max-width: 100%;
+		height: 200px;
+		width: 150px;
+	}
+	ul.product li .product-top{
+		position: relative;
+		overflow:hidden;
+	}
+	ul.product li .product-top.product-1{
+		display: block;
+	}
+	ul.product li .product-top.product-1 img{
+		display: block;
+	}
+	ul.product li .product-top a.buy-now{
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		display: block;
+		background-color: #446084;
+		color: #fff;
+		padding: 10px 0px;
+		position: absolute;
+		bottom: -36px;
+		width: 100%;
+
+	}
+	ul.product li:hover a.buy-now{
+		bottom: 0px;
+		width: 150px;
+	}
+	ul.product li .product-information {
+		padding: 3px 0px;
+
+	}
+	ul.product li .product-information a{
+		display: block;
+		text-decoration: none;
+
+	}
+
+	ul.product li .product-information a.product-cat{
+		font-size: 11px;
+		text-transform: uppercase;
+		color: #9e9e9e;
+		padding: 3px 0px ;
+	}
+
+		ul.product li .product-information a.product-name{
+		color: #334862;
+		padding: 3px 0px;		
+	}
+
+/*
+		ul.product li .product-information a.product-price{
+		color: #111;
+		padding: 3px 0px;		
+		font-weight: 600px;
+	}
+*/
+	.box-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+.box-price .price {
+  color: red;
+}
+/*
+.box-price .sale {
+  color: white;
+  background-color: red;
+  padding: 3px;
+  border-radius: 5px;
+}
+*/
+.box-price .old-price {
+  text-decoration: line-through;
+}
+</style>
+<body>
+   
+	<div id="wrapper">
+		<ul class="product">
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="spC++.html" class="product-1">
+							<img src="giao trinh C++.png" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách công nghệ</a>
+						<a href="" class="product-name">Giáo Trình C++ Và Lập Trình Hướng Đối Tượng </a>
+						<div class="box-price">
+							<p>
+              				<span class="price">590.000đ</span> 
+<!--              				<span class="sale">-40%</span>-->
+            				</p>
+            				<p><span class="old-price">800.000đ</span></p>
+						</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="spC.html" class="product-1">
+							<img src="ky thuat lap trinh C.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách công nghệ</a>
+						<a href="" class="product-name">Giáo trình kỹ thuật lập trình C căn bản và nâng cao  </a>
+						<div class="product-price">Giá: 107.000đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="spJava.html" class="product-1">
+							<img src="lap trình Java.png" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách công nghệ</a>
+						<a href="" class="product-name">Giáo trình lập trình Java căn bản </a>
+						<div class="product-price">Giá: 91.000đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="HanhTrangLapTrinh.html" class="product-1">
+							<img src="./HanhTrangLapTrinh.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách công nghệ</a>
+						<a href="" class="product-name">Hành trang lập trình </a>
+						<div class="product-price">Giá: 134.000đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="TiengAnhChuyenNganh.html" class="product-1">
+							<img src="TA CNTT.png" alt="">
+						</a>
+					<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách ngôn ngữ</a>
+						<a href="" class="product-name">Tiếng anh chuyên nghành </a>
+						<div class="product-price">Giá: 33.000đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="TiengAnhGiaoTiep.html" class="product-1">
+							<img src="TA giao tiep.png" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách ngôn ngữ</a>
+						<a href="" class="product-name">Sách học tiếng anh giao tiếp </a>
+						<div class="product-price">Giá: 235.000Đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="TuVungTiengAnh.html" class="product-1">
+							<img src="tu vung.png" alt="">
+						</a>
+					<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách ngôn ngữ</a>
+						<a href="" class="product-name">Sách từ vựng tiếng anh </a>
+						<div class="product-price">Giá:159.000đ</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="NguPhapTiengAnh.html" class="product-1">
+							<img src="tong on ngu phap.png" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+					</div>
+					<div class="product-information">
+						<a href="" class="product-cat">Sách ngôn ngữ</a>
+						<a href="" class="product-name">Sách ngữ pháp tiếng anh </a>
+						<div class="product-price">Giá: 200.000đ</div>
+					</div>
+				</div>
+			</li>
+
+		</ul>
+
+	</div>
+	
+</div>
+</body>
+</html>
