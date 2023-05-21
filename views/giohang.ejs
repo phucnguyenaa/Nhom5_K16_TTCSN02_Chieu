@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>gio hang</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ddd;
+      }
+
+      .wrapper {
+        width: 80%;
+        height: 800px;
+        background-color: #fff;
+        margin: 0 auto;
+      }
+
+      .items {
+        width: inherit;
+        height: 150px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.51);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .items div:nth-of-type(1) {
+        flex-grow: 0.5;
+      }
+
+      .items div:nth-of-type(2) {
+        flex-grow: 1;
+      }
+
+      .items div:nth-of-type(3) {
+        flex-grow: 1;
+      }
+
+      .items div:nth-of-type(4) {
+        flex-grow: 1;
+      }
+
+      .items div:nth-of-type(5) {
+        flex-grow: 1;
+      }
+
+      .items div:nth-of-type(6) {
+        flex-grow: 1;
+      }
+
+      .items .image img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .items .tick input {
+        float: right;
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+      }
+      /* .items .cost span:nth-of-type(1) {
+        text-decoration: line-through;
+        color: red;
+      } */
+
+      .items .amount input {
+        width: 30px;
+      }
+
+      .items .errase input {
+        float: right;
+        cursor: pointer;
+      }
+
+      button {
+        height: 50px;
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <% mascots.forEach(function(mascot,index) { %>
+
+      <div class="items">
+        <div class="tick">
+          <input type="checkbox" name="" id="" />
+        </div>
+        <div class="image">
+          <img src="img/book/book<%=mascot.id%>.jpg" alt="" />
+        </div>
+        <div class="name">
+          <p><%= mascot.tenbook%></p>
+        </div>
+        <div class="cost">
+          <p>
+            <span><sup>đ</sup><%= mascot.giabook%>.000</span>
+          </p>
+        </div>
+        <div class="amount">
+          <p>
+            <span>Số lượng: <%=mascot.slg%></span>
+            <!-- <input type="number" value="1" min="0" /> -->
+          </p>
+        </div>
+        <div class="errase">
+          <input type="button" value="Xóa" />
+        </div>
+      </div>
+      <% } ); %>
+    </div>
+    <a href="/overview"><button>trở về trang chủ</button></a>
+  </body>
+</html>

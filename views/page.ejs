@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="page.css" />
+  </head>
+
+  <body>
+    <div class="head">
+      <div class="header">
+        <div class="topbar hidden-mobile">
+          <div class="wrapper">
+            <div class="clearfix">
+              <ul class="topnav">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Lịch sử giao dịch</a></li>
+                <li><a href="#">Kiểm tra đơn hàng</a></li>
+              </ul>
+              <ul class="topprofile">
+                <li><a href="/signup">Đăng ký</a></li>
+                <li><a href="/signin">Đăng nhập</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper wrap">
+          <!-- <h1 class="logo">
+              <a href="/">Công Mạnh Book</a>
+            </h1>
+            <div class="cart" id="cart">Giỏ hàng (<span id="cartcount">0</span>)</div>
+      
+            <span class="openmenu-icon"></span>
+            <span class="opensearch-icon"></span> -->
+        </div>
+      </div>
+      <div id="mainnav">
+        <div class="wrapper">
+          <ul class="menu clearfix">
+            <li>
+              <a href="">Danh mục sách</a>
+              <ul class="submenu">
+                <li>
+                  <a href="">Văn học Việt Nam</a>
+                  <ul class="submenu2">
+                    <li><a href="">Tiểu thuyết</a></li>
+                    <li><a href="">Truyện ngắn</a></li>
+                    <li><a href="">Thơ / Kịch</a></li>
+                    <li><a href="">Hồi ký / Phê Bình / Tiểu luận</a></li>
+                    <li><a href="">Tạp bút / Tản văn</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Văn học Nước Ngoài</a>
+                  <ul class="submenu2">
+                    <li><a href="">Đương đại</a></li>
+                    <li><a href="">Lãng mạn</a></li>
+                    <li><a href="">Trinh thám / Kinh dị</a></li>
+                    <li><a href="">Kiếm hiệp</a></li>
+                    <li><a href="">Kinh điển</a></li>
+                    <li><a href="">Thơ / Kịch</a></li>
+                    <li><a href="">Hồi ký / Tiểu luận</a></li>
+                    <li><a href=""> Huyền ảo / Giả tưởng</a></li>
+                    <li><a href="">Tản văn / Tạp bút</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Thiếu nhi</a>
+                  <ul class="submenu2">
+                    <li><a href="">Tuổi teen</a></li>
+                    <li><a href="">Truyện tranh</a></li>
+                    <li><a href="">Thiếu nhi</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Thời sự - Chính trị</a>
+                  <ul class="submenu2">
+                    <li><a href="">Hồi ký / Tự truyện</a></li>
+                    <li><a href="">Thế giới hiện đại</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Tham khảo</a></li>
+                <li><a href="">Giảm giá đặc biệt</a></li>
+                <li><a href="">Sách tái bản</a></li>
+                <li><a href="">Đặt trước sách</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sách bán chạy</a></li>
+            <li><a href="">Chương trình khuyến mãi</a></li>
+            <li><a href="">Giảm giá đặc biệt</a></li>
+            <li>
+              <div class="search">
+                <form action="/search" method="GET" novalidate="novalidate">
+                  <input
+                    type="text"
+                    name="q"
+                    placeholder="Tìm kiếm sách..."
+                    class="text"
+                  />
+                  <input type="submit" value="Tìm kiếm" class="submit" />
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./slider') %> <%- include('./bookstar') %>
+    <div class="SanPham">
+      <% b.forEach(function(a,index) { %>
+      <div class="spleft">
+        <img src="/img/book/book<%= a.id %>.jpg" alt="chưa cập nhật" />
+        <!-- <div class="GiamGia">
+                                    <p>
+                                        <h2>50%</h2>
+                                    </p>
+                                </div> -->
+      </div>
+      <div class="spright">
+        <p>Tên sách: <%= a.tenbook %></p>
+        <!-- <div class="KhuyenMai">
+                                        <p> Khuyến mãi 50%</p>
+                                    </div> -->
+        <div class="gia">Giá: <%= a.giabook %></div>
+        <div class="cty">Công ty: <%= a.ctybook %></div>
+        <div class="nxb">Nhà sản xuất: <%= a.nsxbook %></div>
+        <p class="mota">
+          <%= a.descripbook %>
+          <!-- <h2>Mô tả ngắn:</h2>
+                                    <p>Bạn đang cầm trên tay cuốn sách của Dương Thúy. Dương Thúy không phải là Vệ Tuệ, cũng chả phải Quỳnh Dao. Hai kẻ đó viết văn, còn Dương Thúy viết người. Có thể khẳng định, viết về người rất khó, nhất là lại viết theo mồm người ấy kể. Nhưng
+                                        nàng (tức Dương Thúy) đã làm được việc này một cách......</p>
+                                    <p>Nhà Bán Hàng:Công Mạnh</p>
+                                    <p>BarCode: 12345780</p>
+                                    <p>Còn Hàng: 100 sản phảm</p>
+                                    <p>Số Lượng:</p> -->
+        </p>
+        <button class="buy" id="" name="">
+          <i class="ChonMua"></i>CHỌN MUA
+        </button>
+        <p class="tb">!Bạn cần đăng nhập mới có thể mua sản phẩm</p>
+      </div>
+      <% } ); %>
+    </div>
+    <%- include('./footer') %>
+  </body>
+  <script src="js/page.js"></script>
+</html>

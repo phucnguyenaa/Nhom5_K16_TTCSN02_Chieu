@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Công Mạnh BOOK</title>
+    <link rel="stylesheet" href="overview.css" />
+  </head>
+
+  <body>
+    <%- include('./header') %> <%- include('./slider') %> <%-
+    include('./bookstar') %>
+    <div class="card">
+      <% mascots.forEach(function(mascot,index) { %>
+      <div class="card__picture">
+        <a href="/page?id=<%= index+1+gain %>">
+          <img src="img/book/book<%= index+1+gain%>.jpg" alt="" />
+        </a>
+
+        <div class="detail">
+          <p class="name-book"><%= mascot.tenbook %></p>
+          <pre class="attributes">
+                              số trang:
+                              kích thước:
+                              ngày phát hành:
+                     </pre
+          >
+          <p class="price"><%= mascot.giabook%>.000d</p>
+        </div>
+      </div>
+      <% } ); %>
+    </div>
+    <div class="so">
+      <a href="/panigation1"><span class="so1">1</span></a>
+      <a href="/panigation2"><span class="so2">2</span></a>
+    </div>
+    <%- include('./footer') %>
+  </body>
+  <script src="js/overview.js"></script>
+</html>
